@@ -13,10 +13,10 @@ def pixels_to_ascii(image):
 
     return "".join(["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", "."] [pixel//25] for pixel in image.getdata())
 
-print("\n".join(pixels_to_ascii(grayify(resize_image(Image.open("image.png"))))[index : (index + 100)] for index in range(0, len(pixels_to_ascii(grayify(resize_image(Image.open("image.png"))))), 100)))
+print("\n".join(pixels_to_ascii(grayify(resize_image(Image.open("image.jpg"))))[index : (index + 100)] for index in range(0, len(pixels_to_ascii(grayify(resize_image(Image.open("image.jpg"))))), 100)))
 
 with open("ascii_image.txt", "w") as f:
-    f.write("\n".join(pixels_to_ascii(grayify(resize_image(Image.open("image.png"))))[index : (index + 100)] for index in range(0, len(pixels_to_ascii(grayify(resize_image(Image.open("image.png"))))), 100)))
+    f.write("\n".join(pixels_to_ascii(grayify(resize_image(Image.open("image.jpg"))))[index : (index + 100)] for index in range(0, len(pixels_to_ascii(grayify(resize_image(Image.open("image.jpg"))))), 100)))
 
 with open("ascii_image.txt", "w") as f:
-    f.write("\n".join(pixels_to_ascii(grayify(resize_image(Image.open("image.png"))))[index : (index + 100)] for index in range(0, len(pixels_to_ascii(grayify(resize_image(Image.open("image.png"))))), 100)))
+    f.write("\n".join(pixels_to_ascii(grayify(resize_image(Image.open("image.jpg"))))[index : (index + 100)] for index in range(0, len(pixels_to_ascii(grayify(resize_image(Image.open("image.jpg"))))), 100)))
